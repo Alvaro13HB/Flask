@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'e26fad767fe56ff62e15baf85254dfe7ec73fdaa17a827e12f227746e7cd81f5'
@@ -24,6 +24,7 @@ def form():
 
 @app.route('/dados', methods=['POST'])
 def dados():
+    flash('Dados enviados!')
     dados = request.form
     return render_template('dados.html', dados=dados)
 

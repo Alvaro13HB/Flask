@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     font-family:'Times New Roman', Times, serif;
-    color: white;
 }
 
 body {
@@ -22,6 +21,7 @@ body a, p, h1 {
     text-decoration: none;
     font-weight: 800;
     font-size: 5rem;
+    color: white;
 }
 
 fieldset {
@@ -30,6 +30,7 @@ fieldset {
 }
 
 label, legend {
+    color: white;
     font-size: 1rem;
 }
 
