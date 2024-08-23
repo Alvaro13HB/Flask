@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    <a href="/produto/add">Adicionar</a>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Estoque</th>
+        </tr>
+        {% for produtos in dados %}
+        <tr>
+            <td>{{produtos.nome}}</td>
+            <td>{{produtos.preco}}</td>
+            <td>{{produtos.quantidade_estoque}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

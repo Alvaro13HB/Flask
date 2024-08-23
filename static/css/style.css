@@ -4,10 +4,10 @@
     margin: 0;
     padding: 0;
     font-family:'Times New Roman', Times, serif;
+    color: black;
 }
 
 body {
-    background-image: url("/static/img/osrs.webp");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -17,32 +17,33 @@ body {
     align-items: center;
 }
 
-body a, p, h1 {
+a {
     text-decoration: none;
-    font-weight: 800;
-    font-size: 5rem;
-    color: white;
 }
 
 fieldset {
-    border: 1px solid white;
+    border: 1px solid black;
     padding: 1rem;
 }
 
-label, legend {
-    color: white;
-    font-size: 1rem;
-}
-
 table, td, tr, th {
-    border: 1px solid white;
+    padding: 1rem;
+    border: 1px solid black;
     border-collapse: collapse;
 }
 
 button {
+    background-color: black;
+    color: white;
     margin-top: 1rem;
 }
 
+form div {
+    display: flex;
+    flex-direction: row;
+}
+
 input {
+    border: 1px solid black;
     display: block;
 }
