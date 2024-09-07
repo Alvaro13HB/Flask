@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+        {% for msg in mensagens %}
+            {{ msg }}
+        {% endfor %}
+    {% endif %}
+    <form action="/produto/save" method="post">
+        <div>
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome">
+        </div>
+        <div>
+            <label for="preco">Preço: </label>
+            <input type="number" min="1" step="any" name="preco" id="preco">
+        </div>
+        <div>
+            <label for="quantidade_estoque">Estoque: </label>
+            <input type="number" name="quantidade_estoque" id="quantidade_estoque">
+        </div>
+        <button type="submit">Salvar</button>
+    </form>
+
+{% endblock %}

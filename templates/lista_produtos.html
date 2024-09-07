@@ -1,18 +1,32 @@
 {% extends "base.html" %}
 
 {% block conteudo %}
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+        {% for msg in mensagens %}
+            {{ msg }}
+        {% endfor %}
+    {% endif %}
     <a href="/produto/add">Adicionar</a>
     <table>
         <tr>
             <th>Nome</th>
             <th>Preço</th>
             <th>Estoque</th>
+            <th>Editar</th>
+            <th>Remover</th>
         </tr>
         {% for produtos in dados %}
         <tr>
             <td>{{produtos.nome}}</td>
             <td>{{produtos.preco}}</td>
             <td>{{produtos.quantidade_estoque}}</td>
+            <td>
+                <a href="/produto/edit/{{produtos.id_produto}}">[✎]</a>
+            </td>
+            <td>
+                <a href="/produto/remove/{{produtos.id_produto}}">[X]</a>
+            </td>
         </tr>
         {% endfor %}
     </table>

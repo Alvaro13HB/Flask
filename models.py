@@ -4,7 +4,7 @@ class Produto(db.Model):
     __tablename__ = "tb_produto"
     id_produto = db.Column(db.Integer, primary_key = True)
     nome = db.Column(db.String(100))
-    preco = db.Column(db.Float(10, 2))
+    preco = db.Column(db.Float(2, 10))
     quantidade_estoque = db.Column(db.Integer)
 
 
