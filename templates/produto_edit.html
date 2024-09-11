@@ -1,27 +1,22 @@
 {% extends "base.html" %}
 
 {% block conteudo %}
-    {% set mensagens = get_flashed_messages() %}
-    {% if mensagens %}
-        {% for msg in mensagens %}
-            {{ msg }}
-        {% endfor %}
-    {% endif %}
-    <form action="/produto/edit-save" method="post">
-        <div>
+    <div>
+        <form action="/produto/edit-save" method="post">
             <label for="nome">Nome: </label>
             <input type="text" name="nome" id="nome" value={{dados.nome}}>
-        </div>
-        <div>
             <label for="preco">Preço: </label>
             <input type="number" min="1" step="any" name="preco" id="preco" value="{{dados.preco}}">
-        </div>
-        <div>
             <label for="quantidade_estoque">Estoque: </label>
             <input type="number" name="quantidade_estoque" id="quantidade_estoque" value="{{dados.quantidade_estoque}}">
-        </div>
-        <input type="hidden" name="id" value="{{dados.id_produto}}">
-        <button type="submit">Salvar</button>
-    </form>
-
+            <input type="hidden" name="id" value="{{dados.id_produto}}">
+            <button type="submit">Salvar</button>
+        </form>
+        {% set mensagens = get_flashed_messages() %}
+        {% if mensagens %}
+            {% for msg in mensagens %}
+                {{ msg }}
+            {% endfor %}
+        {% endif %}
+    </div>
 {% endblock %}

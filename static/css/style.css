@@ -17,13 +17,43 @@ body {
     align-items: center;
 }
 
-a {
-    text-decoration: none;
+nav {
+    background-color: rebeccapurple;
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
-fieldset {
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    font-size: larger;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 4rem);
+}
+
+main a{
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.lista_produtos {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
     border: 1px solid black;
     padding: 1rem;
+    max-width: fit-content;
 }
 
 table, td, tr, th {
@@ -33,8 +63,8 @@ table, td, tr, th {
 }
 
 button {
-    background-color: black;
-    color: white;
+    background-color: white;
+    border: 1px solid black;
     margin-top: 1rem;
 }
 
@@ -46,4 +76,17 @@ form div {
 input {
     border: 1px solid black;
     display: block;
+}
+
+footer {
+    height: 2rem;
+    width: 100%;
+    background-color: rebeccapurple;
+    display: flex;
+    align-items: center;
+}
+footer h1 {
+    color: white;
+    text-decoration: none;
+    font-size: medium;
 }

@@ -37,10 +37,10 @@ def produto_save():
         produto = Produto(nome, preco, qtd)
         db.session.add(produto)
         db.session.commit()
-        flash("Usuário cadastrado com sucesso!!!")
+        flash("Produto cadastrado com sucesso.")
         return redirect('/produto')
     else:
-        flash("Preencha todos os campos!!!")
+        flash("Preencha todos os campos.")
         return redirect('/produto/add')
     
 
@@ -50,10 +50,10 @@ def produto_remove(id):
     try:
         db.session.delete(produto)
         db.session.commit()
-        flash("Usuário removido com sucesso!!!")
+        flash("Produto removido com sucesso.")
         return redirect('/produto')
     except:
-        flash("Usuário Inválido")
+        flash("Produto Inválido.")
         return redirect('/produto')
     
 
@@ -75,12 +75,11 @@ def produto_edit_save():
         produto.preco = preco
         produto.quantidade_estoque = qtd
         db.session.commit()
-        flash("Dados alterados com sucesso!!!")
+        flash("Dados alterados com sucesso.")
         return redirect('/produto')
     else:
-        flash("Preencha todos os campos!!!")
+        flash("Preencha todos os campos.")
         return redirect('/produto')
-
 
 
 if __name__ == '__main__':
